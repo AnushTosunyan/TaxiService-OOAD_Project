@@ -5,6 +5,7 @@ public class CarList {
         List<Car> carList = new ArrayList<>();
 
     public void addCar(Car car) {
+
         carList.add(car);
     }
 }
