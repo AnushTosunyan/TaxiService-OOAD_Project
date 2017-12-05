@@ -67,4 +67,21 @@ public class Dispatcher {
     private Driver findDriver(String startLocation, String carType){
         return driverCatalog.findDriver(startLocation, carType);
     }
+
+    public boolean cancelOrder(Person person){
+        for(int i=0; i< listOfPairs.size(); i++){
+            if(listOfPairs.get(i).get(0) == person){
+//                listOfPairs.get(i).get(1).notify();
+                listOfPairs.remove(i);
+                System.out.println("Your Order has been successfully canceled");
+                return true;
+            }
+            if(listOfPairs.get(i).get(1) == person){
+//                listOfPairs.get(i).get(0).notify();
+                listOfPairs.remove(i);
+                System.out.println("Your Order has been successfully canceled");
+                return true;
+            }
+        }
+    }
 }
