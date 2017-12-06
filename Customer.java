@@ -8,8 +8,4 @@ public class Customer extends Person{
         this.phoneNumber = number;
         this.rating = 3;
     }
-    public boolean Order(){
-
-        return false;
-    }
 }

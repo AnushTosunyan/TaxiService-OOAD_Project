@@ -10,4 +10,8 @@ public class OrderCatalog {
         orderList.add(order);
         return order;
     }
+
+    public void delete(Order order){
+            orderList.remove(order);
+    }
 }

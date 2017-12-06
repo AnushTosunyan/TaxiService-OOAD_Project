@@ -7,4 +7,8 @@ public class Person {
     public boolean cancelOrder(){return false;}
 
     public int getID(){return ID;}
+
+    public void rideCanceled(){
+        System.out.println("Unfortunately your ride has been canceled");
+    }
 }

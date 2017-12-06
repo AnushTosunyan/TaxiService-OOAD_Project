@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Driver extends Person{
     private Car car;
     private Ride ride;
@@ -15,4 +17,25 @@ public class Driver extends Person{
         this.order = order;
     }
 
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setRide(Ride ride){
+        this.ride = ride;
+    }
+
+    public Ride getRide(){
+        return ride;
+    }
+
+    public boolean Ride(){
+        Scanner reader = new Scanner(System.in);
+
+        String inp = reader.next();
+        while(inp != "finished"){
+            inp = reader.next();
+        }
+        return true;
+    }
 }

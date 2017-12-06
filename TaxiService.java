@@ -14,6 +14,7 @@ public class TaxiService {
     private Archive archive;
     private FeedbackCatalog feedbackCatalog;
     private Dispatcher dispatcher;
+    private double rate = 1.0;
 
     public TaxiService(String n, String a, int number, URL web){
         this.name = n;
@@ -28,7 +29,15 @@ public class TaxiService {
         this.carList = new CarList();
         this.archive = new Archive();
         this.feedbackCatalog = new FeedbackCatalog();
-        this.dispatcher = new Dispatcher(carList, carDescriptionCatalog, feedbackCatalog, driverCatalog, customerCatalog,
+        this.dispatcher = new Dispatcher(this,carList, carDescriptionCatalog, feedbackCatalog, driverCatalog, customerCatalog,
                 orderCatalog, rideCatalog, archive);
+    }
+
+    public double getRate(){
+        return rate;
+    }
+
+    public void setRate(double rate){
+        this.rate = rate;
     }
 }
