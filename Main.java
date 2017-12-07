@@ -14,7 +14,7 @@ public class Main {
 
         String input = "";
         Scanner reader = new Scanner(System.in);
-
+        dispatcher.leaveFeedback("asdasd", 3.5, dispatcher.getCustomerCatalog().getCustomer(0));
         while(input != "exit"){
             input = reader.next();
             int currentID;

@@ -155,16 +155,8 @@ public class Dispatcher {
     }
 
     public void leaveFeedback(String text, double rating, Person person){
-        Person person2 = new Person();
 
-        for(int i=0; i< listOfPairs.size(); i++) {
-            if (listOfPairs.get(i).get(1) == person) {
-                person2 = listOfPairs.get(i).get(0);
-            } else if (listOfPairs.get(i).get(0) == person) {
-                person2 = listOfPairs.get(i).get(1);
-            }
-        }
-        Feedback feedback = feedbackCatalog.createFeedback(rating, text, person2.getID());
-        updateRating(person2, feedback);
+        Feedback feedback = feedbackCatalog.createFeedback(rating, text, person.getID());
+        updateRating(person, feedback);
     }
 }
