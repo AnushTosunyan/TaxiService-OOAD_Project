@@ -49,8 +49,6 @@ public class Dispatcher {
 
     public boolean register(Information info){
 
-        System.out.println(info.getName());
-
         if (info.getType().equals("customer")) {
             Customer customer = customerCatalog.createCustomer(info.getName(), info.getPhoneNumber());
             System.out.println("your ID is " + customer.getID());

@@ -24,7 +24,6 @@ public class Main {
                 case "register":
                     reader.nextLine();
                     Information currentInfo = new Information();
-                    System.out.println(currentInfo.getName());
                     dispatcher.register(currentInfo);
                     break;
                 case "makeOrder":

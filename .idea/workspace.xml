@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b97ad3b-958d-4059-ba0a-5fb92f84e7f0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Archive.java" afterPath="$PROJECT_DIR$/Archive.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarDescriptionCatalog.java" afterPath="$PROJECT_DIR$/CarDescriptionCatalog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Customer.java" afterPath="$PROJECT_DIR$/Customer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CustomerCatalog.java" afterPath="$PROJECT_DIR$/CustomerCatalog.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dispatcher.java" afterPath="$PROJECT_DIR$/Dispatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Driver.java" afterPath="$PROJECT_DIR$/Driver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DriverCatalog.java" afterPath="$PROJECT_DIR$/DriverCatalog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feedback.java" afterPath="$PROJECT_DIR$/Feedback.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FeedbackCatalog.java" afterPath="$PROJECT_DIR$/FeedbackCatalog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Information.java" afterPath="$PROJECT_DIR$/Information.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main.java" afterPath="$PROJECT_DIR$/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Order.java" afterPath="$PROJECT_DIR$/Order.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrderCatalog.java" afterPath="$PROJECT_DIR$/OrderCatalog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Record.java" afterPath="$PROJECT_DIR$/Record.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ride.java" afterPath="$PROJECT_DIR$/Ride.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RideCatalog.java" afterPath="$PROJECT_DIR$/RideCatalog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaxiService.java" afterPath="$PROJECT_DIR$/TaxiService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Dispatcher.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Dispatcher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dispatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2556">
-              <caret line="146" column="38" lean-forward="true" selection-start-line="146" selection-start-column="38" selection-end-line="146" selection-end-column="38" />
+            <state relative-caret-position="180">
+              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="60" column="80" lean-forward="true" selection-start-line="60" selection-start-column="80" selection-end-line="60" selection-end-column="80" />
+            <state relative-caret-position="263">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -174,7 +158,6 @@
         <option value="$PROJECT_DIR$/Order.java" />
         <option value="$PROJECT_DIR$/Feedback.java" />
         <option value="$PROJECT_DIR$/Information.java" />
-        <option value="$PROJECT_DIR$/Main.java" />
         <option value="$PROJECT_DIR$/CarDescriptionCatalog.java" />
         <option value="$PROJECT_DIR$/Ride.java" />
         <option value="$PROJECT_DIR$/CustomerCatalog.java" />
@@ -186,6 +169,7 @@
         <option value="$PROJECT_DIR$/Driver.java" />
         <option value="$PROJECT_DIR$/DriverCatalog.java" />
         <option value="$PROJECT_DIR$/Dispatcher.java" />
+        <option value="$PROJECT_DIR$/Main.java" />
       </list>
     </option>
   </component>
@@ -685,16 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="60" column="80" lean-forward="true" selection-start-line="60" selection-start-column="80" selection-end-line="60" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Ride.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -726,8 +700,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2556">
-          <caret line="146" column="38" lean-forward="true" selection-start-line="146" selection-start-column="38" selection-end-line="146" selection-end-column="38" />
+        <state relative-caret-position="180">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
