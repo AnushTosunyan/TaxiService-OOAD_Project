@@ -16,4 +16,8 @@ public class Record {
         this.price = price;
         this.date = date;
     }
+
+    public int getID() {
+        return recordID;
+    }
 }

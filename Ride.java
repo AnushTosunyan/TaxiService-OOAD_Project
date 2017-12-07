@@ -14,13 +14,17 @@ public class Ride {
         this.price = 0;
         this.customer = customer1;
         this.driver = driver1;
+
+        incrementDistance();
     }
 
     public double calculatePrice(double rate){
         this.price = distance* 100*rate;
         return price;
     }
-
+    public int getID(){
+        return rideID;
+    }
     public double getDistance() {
         return distance;
     }
@@ -43,6 +47,10 @@ public class Ride {
 
     public String getStatus() {
         return status;
+    }
+
+    private void incrementDistance(){
+        /* TODO crate strategy */
     }
 
     public void setCustomer(Person customer) {

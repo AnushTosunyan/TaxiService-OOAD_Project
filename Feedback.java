@@ -10,4 +10,8 @@ public class Feedback {
         this.targetID = targetID;
         this.rating = rating;
     }
+
+    public int getID() {
+        return feedbackID;
+    }
 }

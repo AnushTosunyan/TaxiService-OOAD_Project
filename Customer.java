@@ -8,4 +8,5 @@ public class Customer extends Person{
         this.phoneNumber = number;
         this.rating = 3;
     }
+
 }

@@ -29,13 +29,5 @@ public class Driver extends Person{
         return ride;
     }
 
-    public boolean Ride(){
-        Scanner reader = new Scanner(System.in);
 
-        String inp = reader.next();
-        while(inp != "finished"){
-            inp = reader.next();
-        }
-        return true;
-    }
 }

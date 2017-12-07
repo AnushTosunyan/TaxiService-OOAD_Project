@@ -22,11 +22,17 @@ public class Information {
         this.type= reader.next();
 
 
-        System.out.println("please indicate your qualification");
-        this.qualification= reader.nextInt();
-
         switch (type){
+            case "customer":
+                this.carDescription= null;
+                this.licencePlate= null;
+                this.carColor= null;
+                this.qualification = 10;
+                break;
+
             case "driver":
+                System.out.println("please indicate your qualification");
+                this.qualification= reader.nextInt();
                 System.out.println("please enter your car make");
                 String make= reader.next();
                 System.out.println("please enter your car model");
@@ -43,13 +49,6 @@ public class Information {
 
                 System.out.println("please enter your car color");
                 this.carColor= reader.next();
-                break;
-
-            case "customer":
-                this.carDescription= null;
-                this.licencePlate= null;
-                this.carColor= null;
-                this.qualification = 10;
                 break;
 
         }

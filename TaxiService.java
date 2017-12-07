@@ -1,10 +1,11 @@
+import java.net.MalformedURLException;
 import java.net.URL;
 
 public class TaxiService {
     private String name;
     private String address;
     private int phone;
-    private URL webpage;
+    private String webpage;
     private CarDescriptionCatalog carDescriptionCatalog;
     private OrderCatalog orderCatalog;
     private RideCatalog rideCatalog;
@@ -16,11 +17,16 @@ public class TaxiService {
     private Dispatcher dispatcher;
     private double rate = 1.0;
 
-    public TaxiService(String n, String a, int number, URL web){
+    public TaxiService(String n, String a, int number, String web){
         this.name = n;
         this.address = a;
         this.phone = number;
         this.webpage = web;
+//        try {
+//            this.webpage = new URL(web);
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
+//        }
         this.carDescriptionCatalog = new CarDescriptionCatalog();
         this.orderCatalog = new OrderCatalog();
         this.rideCatalog = new RideCatalog();
@@ -39,5 +45,9 @@ public class TaxiService {
 
     public void setRate(double rate){
         this.rate = rate;
+    }
+
+    public Dispatcher getDispatcher() {
+        return dispatcher;
     }
 }
