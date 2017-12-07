@@ -6,7 +6,7 @@ public class DriverCatalog {
     private int drivers = 0;
 
     public Driver createDriver( String name, String number, Car car) {
-        Driver driver = new Driver(++drivers, name, number, car);
+        Driver driver = new Driver(2*(++drivers + 1), name, number, car);
         driverList.add(driver);
         return driver;
     }
