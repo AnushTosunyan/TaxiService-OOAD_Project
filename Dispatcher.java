@@ -150,6 +150,7 @@ public class Dispatcher {
         driver.notifyForFeedback(ride.getCustomer());
         ride.getCustomer().notifyForFeedback(driver);
 
+        System.out.println(price);
         rideCatalog.remove(ride);
         return price;
     }

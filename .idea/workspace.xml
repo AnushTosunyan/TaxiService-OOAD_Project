@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b97ad3b-958d-4059-ba0a-5fb92f84e7f0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Intro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/Car.class" afterPath="$PROJECT_DIR$/out/production/Project/Car.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/CarList.class" afterPath="$PROJECT_DIR$/out/production/Project/CarList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/Customer.class" afterPath="$PROJECT_DIR$/out/production/Project/Customer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/Dispatcher.class" afterPath="$PROJECT_DIR$/out/production/Project/Dispatcher.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/Driver.class" afterPath="$PROJECT_DIR$/out/production/Project/Driver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/DriverCatalog.class" afterPath="$PROJECT_DIR$/out/production/Project/DriverCatalog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/Feedback.class" afterPath="$PROJECT_DIR$/out/production/Project/Feedback.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/Main.class" afterPath="$PROJECT_DIR$/out/production/Project/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/Order.class" afterPath="$PROJECT_DIR$/out/production/Project/Order.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/Person.class" afterPath="$PROJECT_DIR$/out/production/Project/Person.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/Ride.class" afterPath="$PROJECT_DIR$/out/production/Project/Ride.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main.java" afterPath="$PROJECT_DIR$/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Person.java" afterPath="$PROJECT_DIR$/Person.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ride.java" afterPath="$PROJECT_DIR$/Ride.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/Project/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dispatcher.java" afterPath="$PROJECT_DIR$/Dispatcher.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Dispatcher.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Dispatcher.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Dispatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
-              <caret line="91" column="30" lean-forward="false" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
+            <state relative-caret-position="271">
+              <caret line="152" column="32" lean-forward="false" selection-start-line="152" selection-start-column="32" selection-end-line="152" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,7 +61,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="-306">
               <caret line="16" column="73" lean-forward="false" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -111,7 +96,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Intro" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Intro" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Intro">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -188,13 +173,13 @@
         <option value="$PROJECT_DIR$/Driver.java" />
         <option value="$PROJECT_DIR$/Customer.java" />
         <option value="$PROJECT_DIR$/Order.java" />
-        <option value="$PROJECT_DIR$/Dispatcher.java" />
         <option value="$PROJECT_DIR$/DriverCatalog.java" />
         <option value="$PROJECT_DIR$/Car.java" />
         <option value="$PROJECT_DIR$/Ride.java" />
         <option value="$PROJECT_DIR$/Intro" />
         <option value="$PROJECT_DIR$/Main.java" />
         <option value="$PROJECT_DIR$/Person.java" />
+        <option value="$PROJECT_DIR$/Dispatcher.java" />
       </list>
     </option>
   </component>
@@ -384,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512733346207</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Intro added and updated">
+      <created>1512737120011</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1512737120012</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -434,7 +426,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
+    <MESSAGE value="Intro added and updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Intro added and updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -612,16 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="91" column="30" lean-forward="false" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Driver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
@@ -673,16 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="73" lean-forward="false" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -710,6 +683,26 @@
         <state relative-caret-position="90">
           <caret line="5" column="43" lean-forward="true" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="16" column="73" lean-forward="false" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="152" column="32" lean-forward="false" selection-start-line="152" selection-start-column="32" selection-end-line="152" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
