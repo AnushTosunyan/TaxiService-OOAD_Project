@@ -14,4 +14,8 @@ public class Feedback {
     public int getID() {
         return feedbackID;
     }
+
+    public double getRating() {
+        return rating;
+    }
 }

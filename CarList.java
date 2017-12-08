@@ -1,11 +1,11 @@
 import java.util.*;
 public class CarList {
 
-    private
-        List<Car> carList = new ArrayList<>();
+    private List<Car> carList = new ArrayList<>();
 
-    public void addCar(Car car) {
-
+    public Car newCar(String licencePlate,String  carColor,CarDescription carDescription) {
+        Car car = new Car(licencePlate, carColor, carDescription);
         carList.add(car);
+        return car;
     }
 }

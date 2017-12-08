@@ -30,13 +30,19 @@ public class Dispatcher {
         this.feedbackCatalog = feedbackCatalog1;
     }
     private boolean isQualified(Information info){
-        /* TODO create qualification strategy */
-        return true;
+        if (info.getQualification() > 6){
+            return true;
+        }
+        return false;
     }
 
 
     private void updateRating(Person person, Feedback feedback) {
-        /* TODO create rating strategy */
+
+        double currRaring = person.getRating();
+        double change = feedback.getRating();
+
+        person.setRating(currRaring + (currRaring - change)/10);
     }
 
     public CustomerCatalog getCustomerCatalog() {
@@ -51,19 +57,22 @@ public class Dispatcher {
 
         if (info.getType().equals("customer")) {
             Customer customer = customerCatalog.createCustomer(info.getName(), info.getPhoneNumber());
+            customer.setDispatcher(this);
+
             System.out.println("your ID is " + customer.getID());
             return true;
         }
         else if (isQualified(info)){
             CarDescription carDescription = carDescriptionCatalog.addDescription(info.getCarDescription());
-            Car car = new Car(info.getLicencePlate(), info.getCarColor(), carDescription);
-            carList.addCar(car);
+            Car car = carList.newCar(info.getLicencePlate(), info.getCarColor(), carDescription);
 
             Driver driver = driverCatalog.createDriver(info.getName(), info.getPhoneNumber(), car);
+            driver.setDispatcher(this);
 
             System.out.println("your ID is "+ driver.getID());
             return true;
         }
+        System.out.println("Unfortunately you are not qualified to work in this Taxi service");
         return  false;
 
     }
@@ -76,6 +85,7 @@ public class Dispatcher {
         order.setStatus("onTheWay");
         driver.setOrder(order);
         System.out.println("Your driver is on the way");
+        driver.getCar().displayCarInfo();
         List<Person> pair = new ArrayList<>();
         pair.add(customer);
         pair.add(driver);
@@ -84,17 +94,22 @@ public class Dispatcher {
     }
 
     public boolean cancelOrder(Person person){
-        updateRating(person, null);
+        if(person.getOrder() == null){
+            System.out.println("You do not have an order to cancel");
+            return false;
+        }
+        Feedback feedback = feedbackCatalog.createFeedback(2.0, " ", person.getID());
+        updateRating(person, feedback);
         for(int i=0; i< listOfPairs.size(); i++){
             if(listOfPairs.get(i).get(0) == person){
                 listOfPairs.get(i).get(1).rideCanceled();
-                listOfPairs.remove(i);
+                listOfPairs.remove(listOfPairs.get(i));
                 System.out.println("Your Order has been successfully canceled");
                 return true;
             }
             if(listOfPairs.get(i).get(1) == person){
                 listOfPairs.get(i).get(0).rideCanceled();
-                listOfPairs.remove(i);
+                listOfPairs.remove(listOfPairs.get(i));
                 System.out.println("Your Order has been successfully canceled");
                 return true;
             }
@@ -112,15 +127,14 @@ public class Dispatcher {
                 ride.setDriver(driver);
                 driver.setStatus("free");
                 Order order = driver.getOrder();
+                order.setStatus("Completed");
                 orderCatalog.delete(order);
             }
         }
 
         System.out.println("Your ride has started");
 
-        Scanner reader = new Scanner(System.in);
-        reader.nextLine();
-        reader.next();
+        driver.Ride();
 
         System.out.println("Your ride has ended");
         finishRide(driver);
@@ -133,24 +147,9 @@ public class Dispatcher {
         archive.createRecord(ride);
         double price = ride.calculatePrice(rate);
 
-        //Create notify for feedback for customer and and driver
-        System.out.println("Please enter your ID");
-        Scanner reader = new Scanner(System.in);
-        reader.nextLine();
+        driver.notifyForFeedback(ride.getCustomer());
+        ride.getCustomer().notifyForFeedback(driver);
 
-        System.out.println("Please rate your ride on a scale from 1 to 5");
-        double rating = reader.nextDouble();
-        int currID = reader.nextInt();
-
-        System.out.println("Please add an additional comment");
-        String comment= reader.next();
-
-        if(currID == driver.getID()){
-            leaveFeedback(comment, rating, ride.getCustomer());
-        }
-        else {
-            leaveFeedback(comment, rating, driver);
-        }
         rideCatalog.remove(ride);
         return price;
     }

@@ -9,4 +9,7 @@ public class Customer extends Person{
         this.rating = 3;
     }
 
+    public Order getOrder() {
+        return order;
+    }
 }

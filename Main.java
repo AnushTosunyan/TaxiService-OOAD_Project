@@ -58,7 +58,6 @@ public class Main {
                     System.out.println("Please enter your ID");
                     currentID = reader.nextInt();
                     driver = dispatcher.getDriverCatalog().getDriver(currentID);
-                    System.out.println("Enter something when you are ready to start the ride");
                     dispatcher.startRide(driver);
             }
         }

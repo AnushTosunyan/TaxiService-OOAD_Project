@@ -1,12 +1,11 @@
 public class Order {
 
-    private
-        int orderId;
-        String status;
-        String startLocation;
-        String endLocation;
-        String carType;
-        Customer Customer;
+    private int orderId;
+    private String status;
+    private String startLocation;
+    private String endLocation;
+    private String carType;
+    private Customer Customer;
 
     public Order(int orderId, Customer c, String startLocation, String endLocation, String carType){
 
@@ -20,6 +19,10 @@ public class Order {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getStatus() {
+        return status;
     }
 
     public int getID() {
