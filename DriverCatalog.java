@@ -33,7 +33,7 @@ public class DriverCatalog {
         while(reader.hasNext() == false) {
             while (driver == driverList.get(0)) {
                 for (int i = 0; i < driverList.size(); i++) {
-                    if (driverList.get(i).getStatus() == "free") {
+                    if (driverList.get(i).getStatus() == "free" && driverList.get(i).getCar().getDescription().getType() == carType) {
                         if (Math.abs(Integer.parseInt(driverList.get(i).getCurrLocation()) - Integer.parseInt(startLocation)) < distance) {
                             distance = Math.abs(Integer.parseInt(driverList.get(i).getCurrLocation()) - Integer.parseInt(startLocation));
                             driver = driverList.get(i);

@@ -13,4 +13,7 @@ public class Car {
         System.out.println("The car is a " + color + " " + description.getMake() + " " + description.getModel() + " with licence plate " + licencePlate);
     }
 
+    public CarDescription getDescription() {
+        return description;
+    }
 }
