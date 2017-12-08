@@ -7,10 +7,8 @@ public class CarDescriptionCatalog {
 
     public CarDescription addDescription(CarDescription description) {
 
-        for (int i=0; i<descriptionList.size(); i++ ){
-            if (descriptionList.get(i) == description){
-                return descriptionList.get(i);
-            }
+        for (CarDescription desc: descriptionList){
+            if (desc == description) return desc;
         }
         CarDescription carDescription= new CarDescription(description.getMake(), description.getModel(),
                 description.getType(), description.getCapacity());

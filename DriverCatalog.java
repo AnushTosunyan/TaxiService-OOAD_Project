@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class DriverCatalog {
@@ -17,9 +18,9 @@ public class DriverCatalog {
     }
 
     public Driver getDriver(int id){
-        for(int i = 0; i<driverList.size(); i++){
-            if(driverList.get(i).getID() == id){
-                return driverList.get(i);
+        for (Driver aDriverList : driverList) {
+            if (aDriverList.getID() == id) {
+                return aDriverList;
             }
         }
         return null;
@@ -30,22 +31,24 @@ public class DriverCatalog {
         Driver driver = driverList.get(0);
         Scanner reader = new Scanner(System.in);
 
-        while(reader.hasNext() == false) {
+        while(!reader.hasNext()) {
             while (driver == driverList.get(0)) {
-                for (int i = 0; i < driverList.size(); i++) {
-                    if (driverList.get(i).getStatus() == "free" && driverList.get(i).getCar().getDescription().getType() == carType) {
-                        if (Math.abs(Integer.parseInt(driverList.get(i).getCurrLocation()) - Integer.parseInt(startLocation)) < distance) {
-                            distance = Math.abs(Integer.parseInt(driverList.get(i).getCurrLocation()) - Integer.parseInt(startLocation));
-                            driver = driverList.get(i);
-                        }
-
-                        if (Math.abs(Integer.parseInt(driverList.get(i).getCurrLocation()) - Integer.parseInt(startLocation)) == distance) {
-                            if (driver.getRating() < driverList.get(i).getRating()) {
-                                driver = driverList.get(i);
-                            }
-                        }
-
+                for (Driver aDriverList : driverList)
+                {
+                    if ((!Objects.equals(aDriverList.getStatus(), "free")) || (aDriverList.getCar().getDescription().getType() != carType)) {
+                        continue;
                     }
+                    if (Math.abs(Integer.parseInt(aDriverList.getCurrLocation()) - Integer.parseInt(startLocation)) < distance) {
+                        distance = Math.abs(Integer.parseInt(aDriverList.getCurrLocation()) - Integer.parseInt(startLocation));
+                        driver = aDriverList;
+                    }
+
+                    if (Math.abs(Integer.parseInt(aDriverList.getCurrLocation()) - Integer.parseInt(startLocation)) == distance) {
+                        if (driver.getRating() < aDriverList.getRating()) {
+                            driver = aDriverList;
+                        }
+                    }
+
                 }
             }
         }

@@ -28,10 +28,7 @@ public class Dispatcher {
         this.feedbackCatalog = feedbackCatalog1;
     }
     private boolean isQualified(Information info){
-        if (info.getQualification() > 6){
-            return true;
-        }
-        return false;
+        return info.getQualification() > 6;
     }
 
 
@@ -116,9 +113,9 @@ public class Dispatcher {
     }
 
     public void startRide(Driver driver){
-        for(int i=0; i< listOfPairs.size(); i++) {
-            if(listOfPairs.get(i).get(1) == driver){
-                Person customer = listOfPairs.get(i).get(0);
+        for (List<Person> listOfPair : listOfPairs) {
+            if (listOfPair.get(1) == driver) {
+                Person customer = listOfPair.get(0);
                 Ride ride = rideCatalog.newRide(driver, customer);
                 driver.setRide(ride);
                 ride.setCustomer(customer);
