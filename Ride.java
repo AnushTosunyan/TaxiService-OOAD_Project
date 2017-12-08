@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Ride {
 
     private int rideID;
@@ -48,7 +50,9 @@ public class Ride {
     }
 
     public void incrementDistance(){
-        /* TODO crate strategy */
+        Random rand = new Random();
+
+        distance += rand.nextDouble();
     }
 
     public void setCustomer(Person customer) {

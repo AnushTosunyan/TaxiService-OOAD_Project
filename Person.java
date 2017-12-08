@@ -35,19 +35,25 @@ public class Person {
     public void notifyForFeedback(Person person){
 
         Scanner reader = new Scanner(System.in);
-        reader.nextLine();
 
-        System.out.println("Would you like to rate your ride?");
-        String res = reader.next();
-        if (res == "True"){
 
-            System.out.println("Please rate your ride on a scale from 1 to 5");
-            double rating = reader.nextDouble();
+        System.out.println("Would you like to rate your ride? Please enter 'yes' or 'no' ");
+        String res = " ";
+        while(!res.equals("no")) {
+            res = reader.next();
+            if (res.equals("yes")) {
 
-            System.out.println("Please add an additional comment");
-            String comment= reader.next();
+                System.out.println("Please rate your ride on a scale from 1 to 5");
+                double rating = reader.nextDouble();
+                while(rating >5 || rating <1){
+                    System.out.println("Please rate your ride on a scale from 1 to 5");
+                    rating = reader.nextDouble();
+                }
+                System.out.println("Please add an additional comment");
+                String comment = reader.next();
 
-            dispatcher.leaveFeedback(comment, rating, person);
+                dispatcher.leaveFeedback(comment, rating, person);
+            }
         }
     }
 }

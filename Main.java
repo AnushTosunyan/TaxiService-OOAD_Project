@@ -1,10 +1,5 @@
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class Main {
     public static void main(String[] arg){
@@ -12,10 +7,15 @@ public class Main {
         TaxiService taxiService = new TaxiService("asdg", "askfh", 36455, "ajkdha");
         Dispatcher dispatcher= taxiService.getDispatcher();
 
+
+        ArrayList<String> intro = check("Intro");
+        printIntro(0, intro);
+
         String input = "";
         Scanner reader = new Scanner(System.in);
-        dispatcher.leaveFeedback("asdasd", 3.5, dispatcher.getCustomerCatalog().getCustomer(0));
-        while(input != "exit"){
+
+        dispatcher.getCustomerCatalog().getCustomer(0).notifyForFeedback(dispatcher.getDriverCatalog().getDriver(1));
+        while(!input.equals("exit")){
             input = reader.next();
             int currentID;
             Customer customer;
@@ -61,5 +61,41 @@ public class Main {
                     dispatcher.startRide(driver);
             }
         }
+        reader.close();
+    }
+    public static void printIntro(int count, ArrayList<String> intro) {
+        for (;count < intro.size(); count++) {
+            System.out.println(intro.get(count));
+        }
+    }
+
+    private static ArrayList<String> check(String fileName){
+        ArrayList<String> intro = new ArrayList<>();
+        String line;
+        try {
+            FileReader fileReader =
+                    new FileReader(fileName);
+
+            BufferedReader bufferedReader =
+                    new BufferedReader(fileReader);
+
+            while ((line = bufferedReader.readLine()) != null) {
+                intro.add(line);
+            }
+
+            bufferedReader.close();
+        } catch (FileNotFoundException ex) {
+            System.out.println(
+                    "Unable to open file '" +
+                            fileName + "'");
+            return null;
+        } catch (IOException ex) {
+            System.out.println(
+                    "Error reading file '"
+                            + fileName + "'");
+            return null;
+        }
+
+        return intro;
     }
 }

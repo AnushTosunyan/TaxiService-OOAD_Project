@@ -1,0 +1,6 @@
+Hello! Welcome to our Taxi service,
+If you are not already registered please enter "register"
+If you are a registered Customer please enter "makeOrder" to order a taxi
+If you already have a pending order and want to cancel it enter "cancelOrder"
+If you are a driver and are ready to start your ride enter "startRide"
+If you wish to exit the System enter "exit"
