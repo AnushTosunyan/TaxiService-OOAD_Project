@@ -4,6 +4,7 @@ public class Driver extends Person{
     private Car car;
     private Ride ride;
     private Order order;
+    private String status;
 
     public Driver(int id, String name, String number, Car car1){
         this.ID = id;
@@ -11,6 +12,7 @@ public class Driver extends Person{
         this.phoneNumber = number;
         this.rating = 3;
         this.car = car1;
+        this.status = "free";
     }
 
     public void setOrder(Order order) {
@@ -30,4 +32,7 @@ public class Driver extends Person{
     }
 
 
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }

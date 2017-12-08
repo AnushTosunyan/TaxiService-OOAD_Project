@@ -110,7 +110,7 @@ public class Dispatcher {
                 driver.setRide(ride);
                 ride.setCustomer(customer);
                 ride.setDriver(driver);
-
+                driver.setStatus("free");
                 Order order = driver.getOrder();
                 orderCatalog.delete(order);
             }
@@ -133,6 +133,7 @@ public class Dispatcher {
         archive.createRecord(ride);
         double price = ride.calculatePrice(rate);
 
+        //Create notify for feedback for customer and and driver
         System.out.println("Please enter your ID");
         Scanner reader = new Scanner(System.in);
         reader.nextLine();
