@@ -51,7 +51,8 @@ public class DriverCatalog {
 
                 }
             }
+            return driver;
         }
-        return driver;
+        return null;
     }
 }

@@ -14,7 +14,6 @@ public class Main {
         String input = "";
         Scanner reader = new Scanner(System.in);
 
-        dispatcher.getCustomerCatalog().getCustomer(0).notifyForFeedback(dispatcher.getDriverCatalog().getDriver(1));
         while(!input.equals("exit")){
             input = reader.next();
             int currentID;

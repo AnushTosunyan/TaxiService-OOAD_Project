@@ -77,6 +77,12 @@ public class Dispatcher {
         Order order = orderCatalog.makeOrder(customer, startLocation, targetLocation, carType);
         System.out.println("Searching for appropriate drivers");
         Driver driver = driverCatalog.findDriver(startLocation, carType);
+
+        if (driver == null) {
+            System.out.println("The order has been canceled");
+            return null;
+        }
+
         order.setStatus("onTheWay");
         driver.setOrder(order);
         System.out.println("Your driver is on the way");
